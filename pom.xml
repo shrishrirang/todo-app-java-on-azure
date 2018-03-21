@@ -116,34 +116,6 @@
             </plugin>
 
             <!--*************************************************-->
-            <!-- Deploy to Azure Web App for Containers          -->
-            <!--*************************************************-->
-            <!--
-            <plugin>
-                <groupId>com.microsoft.azure</groupId>
-                <artifactId>azure-webapp-maven-plugin</artifactId>
-                <version>${plugin.azure.webapp.version}</version>
-                <configuration>
-                    <resourceGroup>java-on-azure</resourceGroup>
-                    <appName>${azure.app.name}</appName>
-                    <region>westus</region>
-                    <pricingTier>s1</pricingTier>
-                    <containerSettings>
-                        <imageName>${docker.image.prefix}/${project.artifactId}:${project.version}</imageName>
-                        <registryUrl>https://${docker.image.prefix}</registryUrl>
-                        <serverId>${docker.image.prefix}</serverId>
-                    </containerSettings>
-                    <appSettings>
-                        <property>
-                            <name>PORT</name>
-                            <value>8080</value>
-                        </property>
-                    </appSettings>
-                </configuration>
-            </plugin>
-            -->
-
-            <!--*************************************************-->
             <!-- Deploy to tomcat on localhost                   -->
             <!--*************************************************-->
             <plugin>
